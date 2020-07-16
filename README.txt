@@ -1,0 +1,26 @@
+---|HOW TO START|---
+Create bot client at https://discord.com/developers/applications by clicking "New Application" and creating your bot in the "Bot" tab
+
+Scroll down on the bot tab and configure the permissions you want Itachi to have, and then copy down that integer
+
+Go to your application's general info tab and copy down the client index
+
+Go to this link replacing {clientID} and {permissionsInteger} with the numbers you copied down before, https://discord.com/oauth2/authorize?client_id={clientID}&scope=bot&permissions={permissionsInteger}
+
+Add Itachi to your server
+
+Clone the branch to your PC or server
+
+Generate and copy a token for your bot from the bot page and paste it into the auth.json file
+
+Run index.js in a node.js environment
+
+---|OPTIONS|---
+Your wake key can be changed on line 6 of index.js
+
+Replace the funfacts with your own, or add as many as you want on line 238 through line 241
+
+Any of the Username based text commands such as -kill, -slap, or -shank, can be altered or added to using the string "%USER%" as the command user and %VICTIM% as the mentioned user
+
+---|CREATOR REQUESTS|---
+Please do not change the package.json, this bot is credited to me, Vain Alibi.
