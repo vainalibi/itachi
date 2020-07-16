@@ -160,7 +160,19 @@ bot.on('message', function(message){
 
                 try
                 {
-                    var randomdeath = Math.ceil(Math.random()*10)
+                    var deaths = ["%VICTIM% choked on a shoe that %USER% shoved down their throat",
+                        "%USER% was speeding down the road and slammed into %VICTIM%'s pet penguin and %VICTIM% died of sadness",
+                        "%USER% pulled out a gun and shot at %VICTIM% and all that came out was a big flag that said \"Bang!\" And %VICTIM% died of shock.",
+                        "%USER% cut off %VICTIM%'s toes off and %VICTIM% fell of a cliff",
+                        "%USER% offered %VICTIM% to smell %USER%'s flowers, but it was a trap and a comically large knife flew out of the flowers and stabbed %VICTIM%'s face",
+                        "%USER% offered %VICTIM% a drink of water, but when %VICTIM% drank it they realized it had tons of tiny invisible knives in it and they ripped up %VICTIM%'s insides",
+                        "%USER% fed %VICTIM% a watermelon that had black seeds in it and a huge watermelon grew in %VICTIM%'s stomach and blew them up",
+                        "%VICTIM% sat on a whoopie cushion that %USER% planted and it released so much air that it shot %VICTIM% into the sky and they fell to their death",
+                        "%USER% used their mind powers to summon an anvil in the air above %VICTIM%'s head",
+                        "%USER% rigged %VICTIM%'s jetpack so it could go up but couldn't come down. %VICTIM% suffocated in space."
+                    ];
+
+                    var randomdeath = Math.floor(Math.random()*deaths.length)
 
                     if(bot.user.id == message.mentions.users.first().id){
                         channel.send("You can't kill me, I am immortal. >:D")
@@ -172,39 +184,7 @@ bot.on('message', function(message){
                         return 
                     }
 
-                    switch(randomdeath)
-                    {
-                        case 1:
-                            channel.send(("%VICTIM% choked on a shoe that %USER% shoved down their throat").replace(/%USER%/g, username).replace(/%VICTIM%/g, message.mentions.users.first().username))
-                        break;
-                        case 2:
-                            channel.send(("%USER% was speeding down the road and slammed into %VICTIM%'s pet penguin and %VICTIM% died of sadness").replace(/%USER%/g, username).replace(/%VICTIM%/g, message.mentions.users.first().username))
-                        break;
-                        case 3:
-                            channel.send(("%USER% pulled out a gun and shot at %VICTIM% and all that came out was a big flag that said \"Bang!\" And %VICTIM% died of shock.").replace(/%USER%/g, username).replace(/%VICTIM%/g, message.mentions.users.first().username))
-                        break;
-                        case 4:
-                            channel.send(("%USER% cut off %VICTIM%'s toes off and %VICTIM% fell of a cliff").replace(/%USER%/g, username).replace(/%VICTIM%/g, message.mentions.users.first().username))
-                        break;
-                        case 5:
-                            channel.send(("%USER% offered %VICTIM% to smell %USER%'s flowers, but it was a trap and a comically large knife flew out of the flowers and stabbed %VICTIM%'s face").replace(/%USER%/g, username).replace(/%VICTIM%/g, message.mentions.users.first().username))
-                        break;
-                        case 6:
-                            channel.send(("%USER% offered %VICTIM% a drink of water, but when %VICTIM% drank it they realized it had tons of tiny invisible knives in it and they ripped up %VICTIM%'s insides").replace(/%USER%/g, username).replace(/%VICTIM%/g, message.mentions.users.first().username))
-                        break;
-                        case 7:
-                            channel.send(("%USER% fed %VICTIM% a watermelon that had black seeds in it and a huge watermelon grew in %VICTIM%'s stomach and blew them up").replace(/%USER%/g, username).replace(/%VICTIM%/g, message.mentions.users.first().username))
-                        break;
-                        case 8:
-                            channel.send(("%VICTIM% sat on a whoopie cushion that %USER% planted and it released so much air that it shot %VICTIM% into the sky and they fell to their death").replace(/%USER%/g, username).replace(/%VICTIM%/g, message.mentions.users.first().username))
-                        break;
-                        case 9:
-                            channel.send(("%USER% used their mind powers to summon an anvil in the air above %VICTIM%'s head").replace(/%USER%/g, username).replace(/%VICTIM%/g, message.mentions.users.first().username))
-                        break;
-                        case 10:
-                            channel.send(("%USER% rigged %VICTIM%'s jetpack so it could go up but couldn't come down. %VICTIM% suffocated in space.").replace(/%USER%/g, username).replace(/%VICTIM%/g, message.mentions.users.first().username))
-                        break;
-                    }
+                    channel.send(((deaths[randomdeath]).replace(/%USER%/g, username)).replace(/%VICTIM%/g, message.mentions.users.first().username))
                 }
                 catch(error)
                 {
