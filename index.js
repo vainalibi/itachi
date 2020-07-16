@@ -5,6 +5,8 @@ const auth = require("./auth.json")
 const bot = new Discord.Client()
 const wakekey = "-"
 
+console.log("bruh moment")
+
 //Login and log login success
 
 bot.login(auth.token)
