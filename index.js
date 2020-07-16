@@ -37,86 +37,46 @@ bot.on('message', function(message){
 
     try {
         if(userID == "499440551243022336" && message.mentions.users.first().id == bot.user.id && content.substring(0, 1) != wakekey){
-            var randomgreeting = Math.ceil(Math.random()*10)
+            var greetings = [
+                "yo whaddup aleebee",
+                "my boi alibi!!!! ;)",
+                "aye broooo",
+                "hey alibbiii how it beee?",
+                "huh? who are you? nah im just kiddin what up alibiiiiii",
+                "BRO HOW IT BE GOIN ALEEBEE",
+                "ayyyeee whats good mannnn",
+                "hello there",
+                "aye watchu been up to my guy",
+                "heyy whatsup alibi"
+            ]
+            var randomgreeting = Math.floor(Math.random()*greetings.length)
             channel.startTyping()
             setTimeout(function(){
                 channel.stopTyping(true)
-                switch(randomgreeting)
-                {
-                case 1:
-                    channel.send("yo whaddup aleebee")
-                break;
-                case 2:
-                    channel.send("my boi alibi!!!! ;)")
-                break;
-                case 3:
-                    channel.send("aye broooo")
-                break;
-                case 4:
-                    channel.send("hey alibbiii how it beee?")
-                break;
-                case 5:
-                    channel.send("huh? who are you? nah im just kiddin what up alibiiiiii")
-                break;
-                case 6:
-                    channel.send("BRO HOW IT BE GOIN ALEEBEE")
-                break;
-                case 7:
-                    channel.send("ayyyeee whats good mannnn")
-                break;
-                case 8:
-                    channel.send("hello there")
-                break;
-                case 9:
-                    channel.send("aye watchu been up to my guy")
-                break;
-                case 10:
-                    channel.send("heyy whatsup alibi")
-                break;
-                }
+                channel.send(greetings[randomgreeting])
             }, 2000);
         }
     }catch(err){}
 
     try {
         if(userID == "427625038502690848" && message.mentions.users.first().id == bot.user.id && content.substring(0, 1) != wakekey){
-            var randomgreeting = Math.ceil(Math.random()*10)
+            var greetings = [
+                "AYE STITCHYY ;3",
+                "heeeyyy its my guy stitchesssssssssss",
+                "yooo stitchyy",
+                "ayyee how it be my guyyy",
+                "HEYYY ITS STITCHES!!1!1",
+                "yoooo whatchu up to my guy stitches",
+                "aayyee whats up stitchy",
+                "whatsup my dude stitchyyyyy",
+                "hey hows it goin my broski",
+                "yo whats UP MY BRONANA"
+            ]
+            var randomgreeting = Math.floor(Math.random()*greetings.length)
             channel.startTyping()
             setTimeout(function(){
                 channel.stopTyping(true)
-                switch(randomgreeting)
-                {
-                case 1:
-                    channel.send("AYE STITCHYY ;3")
-                break;
-                case 2:
-                    channel.send("heeeyyy its my guy stitchesssssssssss")
-                break;
-                case 3:
-                    channel.send("yooo stitchyy")
-                break;
-                case 4:
-                    channel.send("ayyee how it be my guyyy")
-                break;
-                case 5:
-                    channel.send("HEYYY ITS STITCHES!!1!1")
-                break;
-                case 6:
-                    channel.send("yoooo whatchu up to my guy stitches")
-                break;
-                case 7:
-                    channel.send("aayyee whats up stitchy")
-                break;
-                case 8:
-                    channel.send("whatsup my dude stitchyyyyy")
-                break;
-                case 9:
-                    channel.send("hey hows it goin my broski")
-                break;
-                case 10:
-                    channel.send("yo whats UP MY BRONANA")
-                break;
-                }
+                channel.send(greetings[randomgreeting])
             }, 2000);
         }
     }catch(err){}
