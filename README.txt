@@ -18,9 +18,9 @@ Run index.js in a node.js environment
 ---|OPTIONS|---
 Your wake key can be changed on line 6 of index.js
 
-Replace the funfacts with your own, or add as many as you want on line 238 through line 241
+Replace the funfacts with your own, or add as many as you want on line 179 through line 181
 
-Any of the Username based text commands such as -kill, -slap, or -shank, can be altered or added to using the string "%USER%" as the command user and %VICTIM% as the mentioned user
+Any of the Username based text commands such as -kill(L.119), -slap(L.96), or -shank(L.185), can be altered or added to using the string "%USER%" as the command user and %VICTIM% as the mentioned user
 
 ---|CREATOR REQUESTS|---
 Please do not change the package.json, this bot is credited to me, Vain Alibi.
