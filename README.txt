@@ -11,16 +11,16 @@ Add Itachi to your server
 
 Clone the master branch to your PC or server
 
-Generate and copy a token for your bot from the bot page and paste it into the auth.json file
+Generate and copy a token for your bot from the bot page and paste it into the options.json file
 
 Run index.js in a node.js environment
 
 ---|OPTIONS|---
-Your wake key can be changed on line 6 of index.js
+Your wake key can be changed in the options.json file
 
 Replace the funfacts with your own, or add as many as you want on line 179 through line 181
 
-Any of the Username based text commands such as -kill(L.119), -slap(L.96), or -shank(L.185), can be altered or added to using the string "%USER%" as the command user and %VICTIM% as the mentioned user
+Any of the Username based text commands such as -kill, -slap, or -shank, can be altered or added to using the string "%USER%" as the command user and %VICTIM% as the mentioned user
 
 ---|CREATOR REQUESTS|---
 Please do not change the package.json, this bot is credited to me, Vain Alibi.

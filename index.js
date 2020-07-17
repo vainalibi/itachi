@@ -1,13 +1,12 @@
 //Recognise Dependancies
 
 const Discord = require("discord.js")
-const auth = require("./auth.json")
+const auth = require("./options.json")
 const bot = new Discord.Client()
-const wakekey = "-"
 
 //Login and log login success
 
-bot.login(auth.token)
+bot.login(options.token)
 
 bot.on('ready', function(){
     console.log("Logged in as " + bot.user.tag + " and an ID of " + bot.user.id)
@@ -36,7 +35,7 @@ bot.on('message', function(message){
     //special greetings
 
     try {
-        if(userID == "499440551243022336" && message.mentions.users.first().id == bot.user.id && content.substring(0, 1) != wakekey){
+        if(userID == "499440551243022336" && message.mentions.users.first().id == bot.user.id && content.substring(0, 1) != options.wakekey){
             var greetings = [
                 "yo whaddup aleebee",
                 "my boi alibi!!!! ;)",
@@ -59,7 +58,7 @@ bot.on('message', function(message){
     }catch(err){}
 
     try {
-        if(userID == "427625038502690848" && message.mentions.users.first().id == bot.user.id && content.substring(0, 1) != wakekey){
+        if(userID == "427625038502690848" && message.mentions.users.first().id == bot.user.id && content.substring(0, 1) != options.wakekey){
             var greetings = [
                 "AYE STITCHYY ;3",
                 "heeeyyy its my guy stitchesssssssssss",
@@ -83,7 +82,7 @@ bot.on('message', function(message){
 
     //detect wake key, command, and arguments
 
-    if (content.substring(0, 1) == wakekey){
+    if (content.substring(0, 1) == options.wakekey){
         var args = content.substring(1).split(" ")
         var cmd = args[0]
         args = args.splice(1)
