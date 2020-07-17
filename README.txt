@@ -3,7 +3,7 @@ Create bot client at https://discord.com/developers/applications by clicking "Ne
 
 Scroll down on the bot tab and configure the permissions you want Itachi to have, and then copy down that integer
 
-Go to your application's general info tab and copy down the client index
+Go to your application's general info tab and copy down the clientID
 
 Go to this link replacing {clientID} and {permissionsInteger} with the numbers you copied down before, https://discord.com/oauth2/authorize?client_id={clientID}&scope=bot&permissions={permissionsInteger}
 
