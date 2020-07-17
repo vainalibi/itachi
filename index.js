@@ -183,12 +183,21 @@ bot.on('message', function(message){
                 channel.send(funfacts[randomfact])
             break;
             case "shank":
+                if(bot.user.id == message.mentions.users.first().id){
+                    channel.send("You can't shank me, that's against the rules >:(")
+                    return
+                }
+
+                if(userID == message.mentions.users.first().id){
+                    channel.send("You want to shank yourself...? Uhhhhh")
+                    return 
+                }
                 var shankdeaths = [
                     "%VICTIM% was shanked by %USER%. Oops that sucks for you, %USER%.",
                     "%USER% crafted a shank and assaulted %VICTIM% with it from behind. Lol."
                 ]
                 var randomshank = Math.floor(Math.random()*shankdeaths.length)
-                channel.send(shankdeaths[randomshank].replace(/%USER%/g, username)).replace(/%VICTIM%/g, message.mentions.users.first().username)
+                channel.send(((shankdeaths[randomshank]).replace(/%USER%/g, username)).replace(/%VICTIM%/g, message.mentions.users.first().username))
             break;
             case "ping":
                 channel.send("Pong!")
