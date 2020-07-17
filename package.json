@@ -1,10 +1,9 @@
 {
-  "name": "itachi-js",
+  "name": "itachi.js",
   "version": "1.0.0",
   "description": "A fun Discord bot!",
   "main": "index.js",
   "author": "Alibi",
-  "license": "ISC",
   "dependencies": {
     "discord.js": "^11.6.4"
   }
