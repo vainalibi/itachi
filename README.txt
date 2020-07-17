@@ -9,7 +9,7 @@ Go to this link replacing {clientID} and {permissionsInteger} with the numbers y
 
 Add Itachi to your server
 
-Clone the branch to your PC or server
+Clone the master branch to your PC or server
 
 Generate and copy a token for your bot from the bot page and paste it into the auth.json file
 
