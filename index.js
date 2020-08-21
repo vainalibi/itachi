@@ -1,7 +1,7 @@
 //Recognise Dependancies
 
 const Discord = require("discord.js")
-const auth = require("./options.json")
+const options = require("./options.json")
 const bot = new Discord.Client()
 
 //Login and log login success
@@ -201,7 +201,7 @@ bot.on('message', function(message){
             case "ping":
                 channel.send("Pong!")
             break;
-
+            
         }
     }
 })
